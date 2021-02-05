@@ -1,0 +1,42 @@
+<!--
+  ~ Created by Jithin kozhiyodan on 15/1/21 10:33 AM
+  ~ Copyright (c) 2021 . All rights reserved.
+  ~ Last modified 15/1/21 10:33 AM
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="348dp"
+    android:height="197dp"
+    android:viewportWidth="348"
+    android:viewportHeight="197">
+  <group>
+    <clip-path
+        android:pathData="M-19.441,-32.382H363.658V218.089H-19.441V-32.382Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M-19.441,-32.382H363.658V218.089H-19.441V-32.382Z"
+        android:fillColor="#EB0028"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M429.934,-32.382L187.186,109.243L429.857,89.836L429.934,-32.382Z"
+        android:fillColor="#EB0028"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M443.608,30.241L158.136,113.63L438.519,147.012L443.608,30.241Z"
+        android:fillColor="#EB0028"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M451.924,108.611L122.253,110.756L446.354,246.171L451.924,108.611Z"
+        android:fillColor="#EB0028"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M507.812,227.301L-32.959,61.686L429.437,374.492L507.812,227.301Z"
+        android:fillColor="#EB0028"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M-91.759,507.577L431.931,515.945L475.918,353.648L-186.164,-58.867L-91.759,507.577Z"
+        android:fillColor="#EB0028"
+        android:fillType="evenOdd"/>
+  </group>
+</vector>

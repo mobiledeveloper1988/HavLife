@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Jithin kozhiyodan on 30/12/20 5:20 PM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 30/12/20 5:20 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".view.fragment.ProfileCompletionFinish">
+
+    <ImageView
+        android:id="@+id/imgSuperB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_profile_completion_sb"
+        android:layout_marginTop="@dimen/margin_top_50"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_profile_completion"
+        android:layout_marginTop="@dimen/margin_top_20"
+        app:layout_constraintTop_toBottomOf="@+id/imgSuperB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <RelativeLayout
+
+        android:id="@+id/relProfileBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/txt_profile_completion_container_top"
+        android:background="@drawable/ic_profile_pic_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgSuperB">
+
+        <ImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_profile_dummy" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_profile_add" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/txtProfileNameHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi, Melissa"
+        android:textSize="34sp"
+        android:fontFamily="@font/roboto_black"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="@dimen/margin_top_20"
+        app:layout_constraintTop_toBottomOf="@+id/relProfileBg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/txtProfileDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_profile_completion_finish"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/margin_top_20"
+        android:layout_marginStart="@dimen/margin_start_30"
+        android:layout_marginEnd="@dimen/margin_end_30"
+        app:layout_constraintTop_toBottomOf="@+id/txtProfileNameHead"/>
+
+    <Button
+        android:id="@+id/btnLetsStart"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/txt_profile_completion_fragment_start"
+        android:layout_marginTop="@dimen/margin_top_50"
+        android:layout_marginEnd="@dimen/txt_profile_completion_fragment_end"
+        android:text="@string/txt_profile_completion_text_Lets"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtProfileDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

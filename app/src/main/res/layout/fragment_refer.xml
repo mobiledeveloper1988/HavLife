@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Jithin kozhiyodan on 15/1/21 3:54 PM
+  ~ Copyright (c) 2021 . All rights reserved.
+  ~ Last modified 15/1/21 3:54 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.referral.ReferFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nstScrollStepTwo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:paddingBottom="@dimen/margin_bottom_30">
+
+            <RelativeLayout
+                android:id="@+id/relGiftBox"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="@dimen/margin_top_20"
+                android:background="@drawable/rectangle_corner_border_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_gift" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtGiftBoxMsg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_10"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:layout_marginEnd="@dimen/margin_end_10"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Refer your Friend and Earn up to 1000 Rewards"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/relGiftBox"
+                app:layout_constraintStart_toStartOf="@+id/relGiftBox"
+                app:layout_constraintTop_toBottomOf="@+id/relGiftBox" />
+
+            <TextView
+                android:id="@+id/txtGiftBoxDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Each time a friend signs up through your rereferral link we'll rewards you both 1000 Points"
+                android:textAlignment="center"
+                android:textColor="@color/colorGray"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtGiftBoxMsg"
+                app:layout_constraintStart_toStartOf="@+id/txtGiftBoxMsg"
+                app:layout_constraintTop_toBottomOf="@+id/txtGiftBoxMsg" />
+
+            <LinearLayout
+                android:id="@+id/lytChallengesView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:background="@drawable/rectangle_corner_border_red"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/margin_start_30"
+                android:paddingTop="@dimen/margin_top_15"
+                android:paddingEnd="@dimen/margin_end_30"
+                android:paddingBottom="@dimen/margin_bottom_15"
+                app:layout_constraintEnd_toEndOf="@+id/relGiftBox"
+                app:layout_constraintStart_toStartOf="@+id/relGiftBox"
+                app:layout_constraintTop_toBottomOf="@+id/txtGiftBoxDescription">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="NHJSK8997"
+                    android:textColor="@color/colorRed"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnStartChallenge"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_10"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:layout_marginEnd="@dimen/margin_end_10"
+                android:text="@string/btn_challenge_details_start"
+                app:backgroundTint="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="@+id/relGiftBox"
+                app:layout_constraintStart_toStartOf="@+id/relGiftBox"
+                app:layout_constraintTop_toBottomOf="@+id/lytChallengesView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

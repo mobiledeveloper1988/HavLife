@@ -1,0 +1,181 @@
+<resources>
+    <string name="app_name">HavLife</string>
+
+    <!--SplashScreen-->
+    <!--image view content descriptions-->
+    <string name="img_splash_logo_description">SplashScreenLogo</string>
+    <!--SplashScreen end-->
+    <!--Sign in $$ Sign up-->
+    <!--image view content descriptions-->
+    <string name="img_sign_up_terms_description">sign up Terms</string>
+    <!--hint-->
+    <string name="txt_email_hint">Enter your email</string>
+    <string name="txt_email_hint_2">Email</string>
+    <string name="txt_name_hint">Enter your name</string>
+    <string name="txt_name_hint_2">Name</string>
+    <string name="txt_mobile_hint">Enter your mobile number</string>
+    <string name="txt_mobile_hint_2">Mobile no</string>
+    <string name="txt_password_hint">Enter password</string>
+    <string name="txt_password_hint_2">Password</string>
+    <string name="txt_re_password_hint">Re-enter password</string>
+
+    <string name="txt_sign_in_head">Get into your\naccount</string>
+    <string name="txt_sign_up_head">Getting Started</string>
+    <string name="txt_sign_up_sub_head">Increase mindfulness exercises</string>
+    <string name="txt_sign_up_terms">By creating an account, you agree to our <b>Term &amp; Conditions</b></string>
+    <string name="btn_sign_in_text">Sign in</string>
+    <string name="btn_sign_up_text">Sign up</string>
+    <string name="btn_sign_in_with_facebook_text">Sign in with facebook</string>
+    <string name="btn_sign_in_with_google_text">Sign in with google</string>
+    <string name="txt_sign_up_text"><u>Sign up</u></string>
+    <string name="txt_sign_in_text"><u>Sign in</u></string>
+    <string name="txt_sign_in_or">OR</string>
+    <string name="txt_new_sign_up_head">Are you a new member?</string>
+    <string name="txt_sign_up_sing_in_head">Already have an account? </string>
+
+    <!--Sign in $$ Sign up end-->
+    <!--Add phone-->
+    <string name="txt_add_phone_head">Add Phone Number</string>
+    <string name="txt_add_phone_sub_head">We’ll share confirmation code</string>
+    <string name="txt_add_phone_description">Enter your phone number to get\nconfirmation code</string>
+    <string name="txt_add_phone_hint">mobile number</string>
+    <string name="btn_add_phone_text">Continue</string>
+    <!--Add phone end-->
+    <!--Confirm phone-->
+    <string name="txt_confirm_phone_head">Confirmation Code</string>
+    <string name="txt_confirm_phone_sub_head">Please check SMS for confirmation code</string>
+    <string name="txt_confirm_phone_description">Please enter the verification code\nfrom the SMS we just sent you.</string>
+    <string name="txt_confirm_phone_hint">mobile number</string>
+    <string name="btn_confirm_phone_text">Continue</string>
+    <string name="txt_confirm_phone_timer_head">Enter Verification Code</string>
+    <string name="txt_confirm_phone_resend_head">Don’t get it?</string>
+    <string name="txt_confirm_phone_resend"><u>Resend it</u></string>
+    <!--Confirm phone end-->
+
+
+    <!--Profile completion-->
+    <string name="btn_profile_completion_text">Continue</string>
+    <string name="txt_profile_completion_step_one_head">Let us know you!</string>
+    <string name="txt_profile_completion_step_one_sub_head">Please complete your profile details</string>
+    <string name="txt_profile_completion_step_one_edit_pic">Edit Photo</string>
+    <string name="txt_profile_completion_step_one_first_name">First name</string>
+    <string name="txt_profile_completion_step_one_last_name">Last name</string>
+    <string name="txt_profile_completion_step_one_dob">Date of birth</string>
+    <string name="txt_profile_completion_step_one_location">Location</string>
+
+
+    <string name="txt_profile_completion_step_two_head">What’s your Interests?</string>
+    <string name="txt_profile_completion_step_two_sub_head">That will help us to understand you</string>
+    <string name="txt_diet">DIET</string>
+    <string name="txt_nutrition">NUTRITION</string>
+    <string name="txt_fitness">FITNESS</string>
+    <string name="txt_cycling">CYCLING</string>
+    <string name="txt_sport">SPORT</string>
+    <string name="txt_smoking">SMOKING</string>
+    <string name="txt_running">RUNNING</string>
+    <string name="txt_swimming">SWIMMING</string>
+    <string name="txt_yoga">YOGA</string>
+
+    <string name="txt_male">MALE</string>
+    <string name="txt_female">FEMALE</string>
+
+    <string name="txt_student">STUDENT</string>
+    <string name="txt_business">BUSINESS</string>
+    <string name="txt_professional">PROFESSIONAL</string>
+    <string name="txt_house_wife">HOME MAKER</string>
+    <string name="txt_grandfather">SR. CITIZEN</string>
+    <string name="txt_teacher">TEACHER</string>
+
+    <string name="txt_profile_completion_step_three_head">Which one are you?</string>
+    <string name="txt_profile_completion_step_three_sub_head">We’ll suggested fitness plan for you</string>
+
+    <string name="txt_profile_completion_step_four_head">What are you?</string>
+    <string name="txt_profile_completion_step_four_sub_head">That will help us to understand</string>
+
+    <string name="txt_profile_completion_step_five_head">How tall are you?</string>
+    <string name="txt_profile_completion_step_five_sub_head">Your height please</string>
+    <string name="txt_profile_completion_step_five_cm">Cm</string>
+    <string name="txt_profile_completion_step_five_ft">Ft.In</string>
+
+
+    <string name="txt_profile_completion_step_six_head">Asking about weight<br>now!</br></string>
+    <string name="txt_profile_completion_step_six_sub_head">Your height please</string>
+
+    <string name="txt_profile_completion_step_seven_head">Medical conditions</string>
+    <string name="txt_profile_completion_step_seven_sub_head">Please select your medical conditions</string>
+
+    <string name="txt_profile_completion_step_eight_head">Physical and Mental</string>
+    <string name="txt_profile_completion_step_eight_sub_head">That will help us to understand you</string>
+    <string name="txt_profile_completion_step_eight_physical_head">Physical State</string>
+    <string name="txt_profile_completion_step_eight_mind_head">State of Mind</string>
+
+    <string name="txt_profile_completion_step_nine_head">Food Preference</string>
+    <string name="txt_profile_completion_step_nine_sub_head">That will help us to understand you</string>
+    <string name="txt_profile_completion_step_nine_food_allergies">Food Allergies</string>
+    <string name="txt_profile_completion_step_nine_food_you_like">Food You Like</string>
+
+    <string name="txt_profile_completion_finish">Welcome to join HAV to make yourself fit and healthy.</string>
+    <string name="txt_profile_completion_text_Lets">Let\'s start</string>
+    <!--Profile completion end-->
+
+    <!--challenge -->
+    <string name="txt_challenge_head">Food Challenges</string>
+    <string name="txt_challenge_sub_head">Complete challenge to unlock new levels</string>
+    <string name="txt_challenge_tab_one">Challenge Tracker</string>
+    <string name="txt_challenge_tab_two">Level Details</string>
+
+    <string name="txt_challenge_details_head">Level 1 Challenge</string>
+    <string name="txt_challenge_details_sub_head">Complete challenge of level 1</string>
+    <string name="btn_challenge_details_start">Start challenge</string>
+    <string name="btn_challenge_details_new">Create new challenge</string>
+
+    <string name="txt_challenge_details_add_frd">Add Friends</string>
+    <string name="txt_challenge_details_target_steps">Select Target Steps</string>
+    <string name="txt_challenge_details_start_date">Start Date</string>
+    <string name="txt_challenge_details_end_date">End Date</string>
+    <string name="txt_challenge_details_description">Description</string>
+    <string name="txt_challenge_details_date_format">DD/MM/YYYY</string>
+    <!--challenge end -->
+
+    <!--notification -->
+    <string name="txt_notification_head">Notifications</string>
+    <string name="txt_integration_head">Integrations</string>
+    <string name="txt_referral_head">Referrals &amp; History</string>
+    <!--notification end-->
+
+    <!--Error message && error code-->
+    <string name="txt_email_error">Please enter a valid email</string>
+    <string name="txt_name_error">Please enter your name</string>
+    <string name="txt_mobile_error">Please enter a valid mobile number</string>
+    <string name="txt_password_error">Please enter a valid password</string>
+    <string name="txt_confirm_password_error">Password and confirm password must be same</string>
+    <string name="txt_server_error">Internal server error please try after some time</string>
+    <string name="txt_internet_error">Please check your internet connection</string>
+    <!--Error message && error code-->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_bottom">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_challenge">Challenge</string>
+    <string name="title_earnings">Earnings</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Melissa</string>
+    <string name="nav_header_subtitle">melissabarnes@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_notification">Notification</string>
+    <string name="menu_appearance">Appearance</string>
+    <string name="menu_referral">Referral</string>
+    <string name="menu_integration">Integration</string>
+    <string name="menu_privacy">Privacy &amp; Security</string>
+    <string name="menu_help">Help &amp; Support</string>
+    <string name="menu_about">About</string>
+
+
+
+</resources>

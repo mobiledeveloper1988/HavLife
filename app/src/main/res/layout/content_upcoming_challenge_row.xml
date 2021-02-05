@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Jithin kozhiyodan on 31/12/20 7:25 PM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 31/12/20 7:25 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin_end_10"
+    android:background="@drawable/rectangle_corner_border_red">
+
+    <LinearLayout
+        android:id="@+id/lytDateBox"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRed"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="@dimen/margin_bottom_40">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_bottom_5"
+            android:fontFamily="@font/roboto_bold"
+            android:text="January"
+            android:layout_marginTop="@dimen/margin_top_50"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_bottom_5"
+            android:fontFamily="@font/roboto_bold"
+            android:text="01"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="46sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="8 am - 9 am"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtChallengeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30 Min. Group Excercise"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/margin_end_35"
+        android:layout_marginStart="@dimen/margin_start_20"
+        android:layout_marginTop="@dimen/margin_top_20"
+        app:layout_constraintStart_toEndOf="@+id/lytDateBox"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/txtChallengeArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_map_pin"
+        android:text="At you own home"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/roboto_medium"
+
+        android:layout_marginTop="@dimen/margin_top_20"
+        android:drawablePadding="@dimen/margin_start_10"
+        app:layout_constraintStart_toStartOf="@+id/txtChallengeName"
+        app:layout_constraintTop_toBottomOf="@+id/txtChallengeName"/>
+    <TextView
+        android:id="@+id/txtChallengeType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Virtual Video Call"
+        android:textSize="12sp"
+        android:textColor="@color/colorGray"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginStart="@dimen/margin_start_25"
+        app:layout_constraintStart_toStartOf="@+id/txtChallengeArea"
+        app:layout_constraintTop_toBottomOf="@+id/txtChallengeArea"/>
+    <ImageView
+        android:id="@+id/imgChallengeUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:src="@mipmap/ic_dummy"
+        android:layout_marginTop="@dimen/margin_top_10"
+        app:layout_constraintStart_toStartOf="@+id/txtChallengeArea"
+        app:layout_constraintTop_toBottomOf="@+id/txtChallengeType"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Now"
+
+        android:textColor="@color/colorRed"
+        android:fontFamily="@font/roboto_regular"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:drawableTint="@color/colorRed"
+        android:textAlignment="center"
+        android:drawablePadding="@dimen/margin_start_10"
+        android:drawableEnd="@drawable/ic_arrow_forward"
+        android:layout_marginTop="@dimen/margin_top_20"
+        android:layout_marginEnd="@dimen/margin_end_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgChallengeUsers"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

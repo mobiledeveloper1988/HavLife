@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Jithin kozhiyodan on 1/12/20 7:27 AM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 1/12/20 7:27 AM
+  ~
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".view.fragment.ProfileCompletionStepThree">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nstScrollStepTwo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStepOne"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginStart="@dimen/txt_profile_completion_fragment_start"
+            android:layout_marginEnd="@dimen/txt_profile_completion_fragment_end"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/txtProfileCompletionHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_profile_completion_head_top"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="@string/txt_profile_completion_step_three_head"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_add_phone_head_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtProfileCompletionSubHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_profile_completion_sub_head_top"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/txt_profile_completion_step_three_sub_head"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_add_phone_sub_head_sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtProfileCompletionHead"
+                app:layout_constraintStart_toStartOf="@+id/txtProfileCompletionHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtProfileCompletionHead" />
+
+            <ProgressBar
+                android:id="@+id/pbProfileCompletion"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_profile_completion_progress_top"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtProfileCompletionSubHead" />
+
+            <LinearLayout
+                android:id="@+id/lytGenderBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_profile_completion_container_top"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pbProfileCompletion">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cstMaleBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <RelativeLayout
+                        android:id="@+id/relMale"
+                        android:layout_width="@dimen/txt_profile_completion_selected_box_male_width"
+                        android:layout_height="@dimen/txt_profile_completion_selected_box_male_height"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imgMale"
+                            android:layout_width="@dimen/txt_profile_completion_selected_box_width"
+                            android:layout_height="@dimen/txt_profile_completion_selected_box_height_2"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_male"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imgMaleTick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/ic_select_tick"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="@+id/relMale"
+                        app:layout_constraintTop_toTopOf="@+id/relMale" />
+
+                    <TextView
+                        android:id="@+id/txtMale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:text="@string/txt_male"
+                        android:textColor="@color/colorGray"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/relMale" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cstFemaleBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <RelativeLayout
+                        android:id="@+id/relFemale"
+                        android:layout_width="@dimen/txt_profile_completion_selected_box_male_width"
+                        android:layout_height="@dimen/txt_profile_completion_selected_box_male_height"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imgFemale"
+                            android:layout_width="@dimen/txt_profile_completion_selected_box_width"
+                            android:layout_height="@dimen/txt_profile_completion_selected_box_height_2"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_female"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imgFemaleTick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/ic_select_tick"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="@+id/relFemale"
+                        app:layout_constraintTop_toTopOf="@+id/relFemale" />
+
+                    <TextView
+                        android:id="@+id/txtFemale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:text="@string/txt_female"
+                        android:textColor="@color/colorGray"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/relFemale" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnStepThree"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/txt_profile_completion_box_top"
+        android:text="@string/btn_profile_completion_text"
+        app:backgroundTint="@color/colorAccent"
+        android:layout_marginStart="@dimen/txt_profile_completion_fragment_start"
+        android:layout_marginEnd="@dimen/txt_profile_completion_fragment_end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Jithin kozhiyodan on 18/10/20 10:30 PM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 18/10/20 10:30 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cstOtp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.PhoneConfirmationScreen"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/txt_confirm_phone_container_bottom"
+            android:layout_marginTop="@dimen/txt_confirm_phone_box_top">
+
+            <TextView
+                android:id="@+id/txtConfirmPhoneHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="@string/txt_confirm_phone_head"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_confirm_phone_head_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtConfirmPhoneSubHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_sign_up_sub_head_top"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/txt_sign_up_sub_head"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_confirm_phone_sub_head_sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtConfirmPhoneHead"
+                app:layout_constraintStart_toStartOf="@+id/txtConfirmPhoneHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtConfirmPhoneHead" />
+
+            <TextView
+                android:id="@+id/txtConfirmPhoneDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_confirm_phone_description_top"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/txt_confirm_phone_description"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_confirm_phone_description_sp"
+
+                app:layout_constraintEnd_toEndOf="@+id/txtConfirmPhoneHead"
+                app:layout_constraintStart_toStartOf="@+id/txtConfirmPhoneHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtConfirmPhoneSubHead" />
+            <TextView
+                android:id="@+id/txtConfirmPhoneTimerHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_confirm_phone_description_top"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/txt_confirm_phone_timer_head"
+                android:textColor="@color/colorGray10"
+                android:textSize="@dimen/txt_confirm_phone_timer_head_sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtConfirmPhoneHead"
+                app:layout_constraintStart_toStartOf="@+id/txtConfirmPhoneHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtConfirmPhoneDescription" />
+
+            <TextView
+                android:id="@+id/txtConfirmPhoneTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_confirm_phone_timer_top"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="02.35"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_confirm_phone_timer_sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtConfirmPhoneHead"
+                app:layout_constraintStart_toStartOf="@+id/txtConfirmPhoneHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtConfirmPhoneTimerHead" />
+            <LinearLayout
+                android:id="@+id/relConfirmPhoneBox"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/txt_confirm_phone_box_height"
+                android:layout_marginStart="@dimen/txt_confirm_phone_box_start"
+                android:layout_marginTop="@dimen/txt_confirm_phone_box_top"
+                android:layout_marginEnd="@dimen/txt_confirm_phone_box_end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtConfirmPhoneTimerHead">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edOtpCode1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:imeOptions="actionNext"
+                    app:boxStrokeColor="@color/colorRed10"
+                    android:textCursorDrawable="@color/colorRed10"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edOtpCode2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:imeOptions="actionNext"
+                    app:boxStrokeColor="@color/colorRed10"
+                    android:textCursorDrawable="@color/colorRed10"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edOtpCode3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:imeOptions="actionNext"
+                    app:boxStrokeColor="@color/colorRed10"
+                    android:textCursorDrawable="@color/colorRed10"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edOtpCode4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:imeOptions="actionNext"
+                    app:boxStrokeColor="@color/colorRed10"
+                    android:textCursorDrawable="@color/colorRed10"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edOtpCode5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:imeOptions="actionNext"
+                    app:boxStrokeColor="@color/colorRed10"
+                    android:textCursorDrawable="@color/colorRed10"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edOtpCode6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    app:boxStrokeColor="@color/colorRed10"
+                    android:textCursorDrawable="@color/colorRed10"
+                    android:inputType="number"
+                    android:maxLength="1"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnConfirmPhone"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_sign_in_input_form_pwd_top"
+                app:backgroundTint="@color/colorAccent"
+                android:text="@string/btn_confirm_phone_text"
+                app:layout_constraintEnd_toEndOf="@+id/relConfirmPhoneBox"
+                app:layout_constraintStart_toStartOf="@+id/relConfirmPhoneBox"
+                app:layout_constraintTop_toBottomOf="@+id/relConfirmPhoneBox" />
+
+            <TextView
+                android:id="@+id/txtConfirmPhoneResendHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_confirm_phone_resend_top"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="end"
+                android:padding="5dp"
+                android:text="@string/txt_confirm_phone_resend_head"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_confirm_phone_timer_sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtConfirmPhoneResend"
+                app:layout_constraintStart_toStartOf="@+id/txtConfirmPhoneHead"
+                app:layout_constraintTop_toBottomOf="@+id/btnConfirmPhone" />
+            <TextView
+                android:id="@+id/txtConfirmPhoneResend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_confirm_phone_resend_top"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="start"
+                android:padding="@dimen/txt_confirm_phone_resend"
+                android:text="@string/txt_confirm_phone_resend"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/txt_confirm_phone_timer_sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtConfirmPhoneHead"
+                app:layout_constraintStart_toEndOf="@+id/txtConfirmPhoneResendHead"
+                app:layout_constraintTop_toBottomOf="@+id/btnConfirmPhone" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBarConfirmPhone"
+        style="@style/Widget.MaterialComponents.Toolbar"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/relLoader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

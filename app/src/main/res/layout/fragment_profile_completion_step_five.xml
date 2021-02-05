@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Jithin kozhiyodan on 1/12/20 7:24 PM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 1/12/20 7:24 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".view.fragment.ProfileCompletionStepFive">
+
+    <TextView
+        android:id="@+id/txtProfileCompletionHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/txt_profile_completion_head_top"
+        android:fontFamily="@font/roboto_black"
+        android:gravity="center"
+        android:text="@string/txt_profile_completion_step_five_head"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/txt_add_phone_head_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtProfileCompletionSubHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/txt_profile_completion_sub_head_top"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:text="@string/txt_profile_completion_step_five_sub_head"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/txt_add_phone_sub_head_sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtProfileCompletionHead"
+        app:layout_constraintStart_toStartOf="@+id/txtProfileCompletionHead"
+        app:layout_constraintTop_toBottomOf="@+id/txtProfileCompletionHead" />
+
+    <ProgressBar
+        android:id="@+id/pbProfileCompletion"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/txt_profile_completion_fragment_start"
+        android:layout_marginTop="@dimen/txt_profile_completion_progress_top"
+        android:layout_marginEnd="@dimen/txt_profile_completion_fragment_end"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtProfileCompletionSubHead" />
+
+    <LinearLayout
+        android:id="@+id/lytScaleType"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pbProfileCompletion">
+
+        <Button
+            android:id="@+id/btnCm"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorRed"
+            android:text="@string/txt_profile_completion_step_five_cm"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnInc"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorWhite"
+            android:text="@string/txt_profile_completion_step_five_ft"
+            android:textAllCaps="false"
+            android:textColor="@color/colorGray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/btnStepFive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lytScaleType">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.hav.havlife.view.custom.ScaleCm
+                android:id="@+id/scaleCm"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:visibility="visible" />
+
+            <com.hav.havlife.view.custom.ScaleInch
+                android:id="@+id/scaleInch"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background=""/>-->
+
+    <TextView
+        android:id="@+id/txtHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/txt_profile_completion_fragment_start"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:text="----cm"
+        android:textColor="@color/colorBlack"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgScaleLine"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgScaleLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/txt_profile_completion_fragment_start"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_line_for_height"
+        app:layout_constraintBottom_toTopOf="@+id/imgGirl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scroll" />
+
+    <ImageView
+        android:id="@+id/imgGirl"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_girl"
+        app:layout_constraintBottom_toTopOf="@+id/btnStepFive"
+        app:layout_constraintEnd_toStartOf="@+id/scroll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgScaleLine" />
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--    </androidx.core.widget.NestedScrollView>-->
+    <Button
+        android:id="@+id/btnStepFive"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/txt_profile_completion_fragment_start"
+        android:layout_marginTop="@dimen/txt_profile_completion_box_top"
+        android:layout_marginEnd="@dimen/txt_profile_completion_fragment_end"
+        android:text="@string/btn_profile_completion_text"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

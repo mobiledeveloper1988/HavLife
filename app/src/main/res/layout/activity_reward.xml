@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Jithin kozhiyodan on 15/1/21 7:21 PM
+  ~ Copyright (c) 2021 . All rights reserved.
+  ~ Last modified 15/1/21 7:21 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.drawer.Reward">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarReward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nstScrollStepTwo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarReward">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:paddingBottom="@dimen/margin_bottom_10">
+
+            <TextView
+                android:id="@+id/txtIntegrationHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_profile_completion_head_top"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="@string/txt_referral_head"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_add_phone_head_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtYourBalanceHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_30"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:layout_marginEnd="@dimen/margin_end_30"
+                android:fontFamily="@font/roboto_black"
+                android:text="Your Balance"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIntegrationHead" />
+
+            <TextView
+                android:id="@+id/txtYourBalanceSubHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_5"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Achieve your goal and earn more points"
+                android:textColor="@color/colorGray60"
+                app:layout_constraintEnd_toEndOf="@+id/txtYourBalanceHead"
+                app:layout_constraintStart_toStartOf="@+id/txtYourBalanceHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtYourBalanceHead" />
+
+            <RelativeLayout
+                android:id="@+id/relEarningHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:background="@drawable/rectangle_corner_border_gray"
+                app:layout_constraintEnd_toEndOf="@+id/txtYourBalanceHead"
+                app:layout_constraintStart_toStartOf="@+id/txtYourBalanceHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtYourBalanceSubHead">
+
+                <ImageView
+                    android:id="@+id/imgDoller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start_30"
+                    android:layout_marginTop="@dimen/margin_top_10"
+                    android:src="@drawable/ic_doller" />
+
+                <TextView
+                    android:id="@+id/txtDollerValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/imgDoller"
+                    android:layout_alignTop="@+id/imgDoller"
+                    android:layout_marginStart="@dimen/margin_start_30"
+                    android:layout_marginTop="@dimen/margin_top_20"
+                    android:text="10,979"
+                    android:textColor="@color/colorRed"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDollerValue"
+                    android:layout_alignStart="@+id/txtDollerValue"
+                    android:layout_alignEnd="@+id/txtDollerValue"
+                    android:layout_marginTop="@dimen/margin_top_5"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Point"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_end_20"
+                    android:src="@drawable/ic_refresh" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relDiamondHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:background="@drawable/rectangle_corner_border_gray"
+                app:layout_constraintEnd_toEndOf="@+id/txtYourBalanceHead"
+                app:layout_constraintStart_toStartOf="@+id/txtYourBalanceHead"
+                app:layout_constraintTop_toBottomOf="@+id/relEarningHead">
+
+                <ImageView
+                    android:id="@+id/imgDiamond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start_30"
+                    android:layout_marginTop="@dimen/margin_top_10"
+                    android:src="@drawable/ic_diamond" />
+
+                <TextView
+                    android:id="@+id/txtDiamondValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/imgDiamond"
+                    android:layout_alignTop="@+id/imgDiamond"
+                    android:layout_marginStart="@dimen/margin_start_30"
+                    android:layout_marginTop="@dimen/margin_top_20"
+                    android:text="108"
+                    android:textColor="@color/colorRed"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDiamondValue"
+                    android:layout_alignStart="@+id/txtDiamondValue"
+                    android:layout_alignEnd="@+id/txtDiamondValue"
+                    android:layout_marginTop="@dimen/margin_top_5"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Point"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_end_20"
+                    android:src="@drawable/ic_refresh" />
+            </RelativeLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/activityTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="#FFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relDiamondHead"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/colorRed"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/colorRed"
+                app:tabTextColor="@color/colorGray" />
+            <com.hav.havlife.view.custom.CustomViewpager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activityTabLayout"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

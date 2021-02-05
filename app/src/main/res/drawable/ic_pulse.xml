@@ -1,0 +1,26 @@
+<!--
+  ~ Created by Jithin kozhiyodan on 2/1/21 3:16 PM
+  ~ Copyright (c) 2021 . All rights reserved.
+  ~ Last modified 2/1/21 3:16 PM
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="119dp"
+    android:height="106dp"
+    android:viewportWidth="119"
+    android:viewportHeight="106">
+  <group>
+    <clip-path
+        android:pathData="M0,0h119v106h-119z"/>
+    <path
+        android:pathData="M82.824,9.937C76.262,9.919 70.927,14.642 70.907,20.486C70.897,23.309 72.152,26.017 74.395,28.011L91.234,43.01V13.029C89.005,11.041 85.978,9.929 82.824,9.937Z"
+        android:fillColor="#AB2300"/>
+    <path
+        android:pathData="M108.072,13.029C103.412,8.907 95.892,8.907 91.234,13.029V43.01L108.072,28.011C112.707,23.873 112.703,17.171 108.072,13.029Z"
+        android:fillColor="#CD2A00"/>
+    <path
+        android:pathData="M59.5,96.01C59.384,96.009 59.268,96 59.153,95.983C58.206,95.833 57.516,95.099 57.516,94.243V24.93L37.422,56.26C37.067,56.807 36.41,57.144 35.7,57.143H0V53.61H34.55L57.779,17.393C58.322,16.546 59.534,16.252 60.485,16.736C61.104,17.053 61.486,17.64 61.484,18.276V84.216L73.504,54.772C73.789,54.075 74.533,53.61 75.366,53.61H119V57.143H76.755L61.362,94.847C61.077,95.545 60.333,96.009 59.5,96.01Z"
+        android:fillColor="#FF6243"/>
+  </group>
+</vector>

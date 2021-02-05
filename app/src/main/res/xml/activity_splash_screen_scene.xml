@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Jithin kozhiyodan on 21/10/20 10:54 AM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 21/10/20 10:54 AM
+  ~
+  -->
+
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/tranAnimateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1700"
+        motion:autoTransition="animateToEnd">
+       <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/imgSplashLogo"
+               motion:framePosition="0"
+               android:scaleX="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/imgSplashLogo"
+               motion:framePosition="0"
+               android:scaleY="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/imgSplashLogo"
+               motion:framePosition="20"
+               android:scaleY=".3" />
+           <KeyAttribute
+               motion:motionTarget="@+id/imgSplashLogo"
+               motion:framePosition="20"
+               android:scaleX=".3" />
+           <KeyAttribute
+               motion:motionTarget="@+id/imgSplashLogo"
+               motion:framePosition="40"
+               android:scaleY=".6" />
+           <KeyAttribute
+               motion:motionTarget="@+id/imgSplashLogo"
+               motion:framePosition="40"
+               android:scaleX=".6" />
+           <KeyAttribute
+               motion:motionTarget="@+id/imgSplashLogo"
+               motion:framePosition="60"
+               android:scaleX=".9" />
+           <KeyAttribute
+               motion:motionTarget="@+id/imgSplashLogo"
+               motion:framePosition="60"
+               android:scaleY=".9" />
+           <KeyAttribute
+               motion:motionTarget="@+id/imgSplashLogo"
+               motion:framePosition="80"
+               android:scaleY="1.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/imgSplashLogo"
+               motion:framePosition="80"
+               android:scaleX="1.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/imgSplashLogo"
+               motion:framePosition="100"
+               android:scaleY="1.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/imgSplashLogo"
+               motion:framePosition="100"
+               android:scaleX="1.2" />
+
+
+       </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+    </ConstraintSet>
+<!--    <Transition-->
+<!--        motion:constraintSetStart="@+id/start"-->
+<!--        motion:constraintSetEnd="@+id/end"-->
+<!--        motion:autoTransition="jumpToStart"/>-->
+<!--    <Transition-->
+<!--        motion:constraintSetStart="@+id/start"-->
+<!--        motion:constraintSetEnd="@+id/end"-->
+<!--        motion:autoTransition="jumpToStart" />-->
+<!--    <Transition-->
+<!--        motion:constraintSetStart="@+id/start"-->
+<!--        motion:constraintSetEnd="@+id/end"-->
+<!--        motion:autoTransition="animateToStart" />-->
+</MotionScene>

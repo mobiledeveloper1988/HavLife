@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Jithin kozhiyodan on 1/1/21 12:53 PM
+  ~ Copyright (c) 2021 . All rights reserved.
+  ~ Last modified 1/1/21 12:53 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/crlLayerOuter"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_top_20"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cpb_background_progressbar_color="@color/colorGray70"
+        app:cpb_background_progressbar_width="5dp"
+        app:cpb_progress="60"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="@color/colorOrange10"
+        app:cpb_progressbar_width="5dp"
+        app:cpb_round_border="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:id="@+id/relMedical"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+
+        android:layout_marginStart="@dimen/margin_start_20"
+        android:layout_marginTop="@dimen/margin_top_20"
+        android:layout_marginEnd="@dimen/margin_end_20"
+        android:layout_marginBottom="@dimen/margin_bottom_20"
+        android:background="@drawable/round_bg_white"
+        app:layout_constraintBottom_toBottomOf="@+id/crlLayerOuter"
+        app:layout_constraintEnd_toEndOf="@+id/crlLayerOuter"
+        app:layout_constraintStart_toStartOf="@+id/crlLayerOuter"
+        app:layout_constraintTop_toTopOf="@+id/crlLayerOuter">
+
+        <ImageView
+            android:id="@+id/imgMedical"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_step_foot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/crlLayerOuter"
+        app:layout_constraintTop_toTopOf="@+id/crlLayerOuter">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/margin_start_10">
+
+            <TextView
+                android:id="@+id/txtStepsHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_5"
+                android:layout_marginTop="@dimen/margin_top_10"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Steps"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtCoinValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="4580"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/txtStepsHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtStepsHead" />
+
+            <TextView
+                android:id="@+id/txtCountMsg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_5"
+                android:fontFamily="@font/roboto_regular"
+                android:text=" / 10,000 "
+                android:textColor="@color/colorGray"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtCoinValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtCoinValue"
+                app:layout_constraintTop_toTopOf="@+id/txtCoinValue" />
+
+            <ProgressBar
+                android:id="@+id/pbProfileCompletion"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_5"
+                android:layout_marginEnd="@dimen/margin_end_10"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtStepsHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtCoinValue" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txtCalBurntValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_end_5"
+                android:drawableStart="@drawable/ic_cal_burn"
+                android:drawablePadding="@dimen/margin_end_5"
+                android:fontFamily="@font/roboto_black"
+                android:text="500"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/margin_top_10"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtCalBurntMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_end_20"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Cal burnt"
+                android:textSize="14sp"
+                android:layout_marginStart="@dimen/margin_start_5"
+                android:textColor="@color/colorGray"
+                app:layout_constraintStart_toEndOf="@+id/txtCalBurntValue"
+                app:layout_constraintTop_toTopOf="@+id/txtCalBurntValue" />
+
+            <TextView
+                android:id="@+id/txtTotalCoinValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_end_5"
+                android:drawableStart="@drawable/ic_dollar_18"
+                android:drawablePadding="@dimen/margin_end_5"
+                android:fontFamily="@font/roboto_black"
+                android:text="5670"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/margin_top_5"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toStartOf="@+id/txtCalBurntValue"
+                app:layout_constraintTop_toBottomOf="@+id/txtCalBurntValue" />
+
+            <TextView
+                android:id="@+id/txtTotalCoinMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="@dimen/margin_end_20"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Coins"
+                android:textSize="14sp"
+                android:layout_marginStart="@dimen/margin_start_5"
+                android:textColor="@color/colorGray"
+                app:layout_constraintStart_toEndOf="@+id/txtTotalCoinValue"
+                app:layout_constraintTop_toTopOf="@+id/txtTotalCoinValue" />
+
+            <TextView
+                android:id="@+id/txtTotalGemsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_end_5"
+                android:drawableStart="@drawable/ic_gems_18"
+                android:drawablePadding="@dimen/margin_end_5"
+                android:fontFamily="@font/roboto_black"
+                android:text="1"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/margin_top_5"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toStartOf="@+id/txtCalBurntValue"
+                app:layout_constraintTop_toBottomOf="@+id/txtTotalCoinValue" />
+
+            <TextView
+                android:id="@+id/txtTotalGemsMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="@dimen/margin_end_20"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Gems"
+                android:textSize="14sp"
+                android:layout_marginStart="@dimen/margin_start_5"
+                android:textColor="@color/colorGray"
+                app:layout_constraintStart_toEndOf="@+id/txtTotalGemsValue"
+                app:layout_constraintTop_toTopOf="@+id/txtTotalGemsValue" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/colorGray70"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="@dimen/margin_top_20"
+    app:layout_constraintTop_toBottomOf="@+id/crlLayerOuter"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

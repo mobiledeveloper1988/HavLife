@@ -1,0 +1,20 @@
+<!--
+  ~ Created by Jithin kozhiyodan on 30/11/20 8:49 AM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 30/11/20 8:49 AM
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="98dp"
+    android:height="98dp"
+    android:viewportWidth="98"
+    android:viewportHeight="98">
+  <group>
+    <clip-path
+        android:pathData="M49,49m-49,0a49,49 0,1 1,98 0a49,49 0,1 1,-98 0"/>
+    <path
+        android:pathData="M-17,-3h132v104h-132z"
+        android:fillColor="#48616B"/>
+  </group>
+</vector>

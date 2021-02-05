@@ -1,0 +1,22 @@
+<!--
+  ~ Created by Jithin kozhiyodan on 15/1/21 6:22 PM
+  ~ Copyright (c) 2021 . All rights reserved.
+  ~ Last modified 15/1/21 6:22 PM
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="19dp"
+    android:viewportWidth="20"
+    android:viewportHeight="19">
+  <group>
+    <clip-path
+        android:pathData="M2.4688,9.5C2.4688,5.13 5.9022,1.5833 10.1328,1.5833C14.3633,1.5833 17.7968,5.13 17.7968,9.5C17.7968,13.87 14.3633,17.4167 10.1328,17.4167C5.9022,17.4167 2.4688,13.87 2.4688,9.5ZM4.768,9.5L8.6,13.4583L15.4976,6.3333L14.417,5.2092L8.6,11.2179L5.8486,8.3838L4.768,9.5Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M0.9355,0H19.3292V19H0.9355V0Z"
+        android:fillColor="#ffffff"
+        android:fillType="evenOdd"/>
+  </group>
+</vector>

@@ -1,0 +1,27 @@
+<!--
+  ~ Created by Jithin kozhiyodan on 31/12/20 6:59 PM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 31/12/20 6:59 PM
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="29dp"
+    android:height="29dp"
+    android:viewportWidth="29"
+    android:viewportHeight="29">
+  <group>
+    <clip-path
+        android:pathData="M0,0h29v29h-29z"/>
+    <path
+        android:pathData="M14.5001,22.4091C10.1303,22.4091 6.591,18.8698 6.591,14.5C6.591,13.1621 6.9271,11.9098 7.5071,10.8025L5.5826,8.878C4.5609,10.5125 3.9546,12.4304 3.9546,14.5C3.9546,20.3264 8.6737,25.0455 14.5001,25.0455V29.0001L19.7728,23.7273L14.5001,18.4546V22.4091Z"
+        android:strokeAlpha="0.4"
+        android:fillColor="#000000"
+        android:fillAlpha="0.4"/>
+    <path
+        android:pathData="M14.5003,3.9546V0L9.2275,5.2727L14.5003,10.5454V6.5909C18.87,6.5909 22.4093,10.1302 22.4093,14.5C22.4093,15.8379 22.0732,17.0902 21.4932,18.1975L23.4178,20.122C24.4393,18.4875 25.0457,16.5696 25.0457,14.5C25.0457,8.6736 20.3266,3.9546 14.5003,3.9546Z"
+        android:strokeAlpha="0.4"
+        android:fillColor="#000000"
+        android:fillAlpha="0.4"/>
+  </group>
+</vector>

@@ -1,0 +1,17 @@
+<!--
+  ~ Created by Jithin kozhiyodan on 31/12/20 10:10 PM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 31/12/20 10:10 PM
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="27dp"
+    android:height="23dp"
+    android:viewportWidth="27"
+    android:viewportHeight="23">
+  <path
+      android:pathData="M4,6.5625H19.4452L14.2065,1.3125L15.5161,0L23,7.5L15.5161,15L14.2065,13.6875L19.4452,8.4375H4V6.5625Z"
+      android:fillColor="#ffffff"
+      android:fillType="evenOdd"/>
+</vector>

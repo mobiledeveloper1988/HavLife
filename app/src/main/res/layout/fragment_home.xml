@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Jithin kozhiyodan on 13/1/21 5:54 PM
+  ~ Copyright (c) 2021 . All rights reserved.
+  ~ Last modified 13/1/21 5:54 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.dashboard.home.HomeFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBarDashboard"
+        style="@style/Widget.MaterialComponents.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nstScrollStepTwo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topAppBarDashboard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:paddingBottom="@dimen/margin_bottom_30">
+
+            <TextView
+                android:id="@+id/txtProfileNameHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:fontFamily="@font/roboto_black"
+                android:text="Melissa Barnes"
+                android:textColor="@color/colorBlack"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@android:style/Widget.Material.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="1"
+                android:stepSize="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtProfileNameHead" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="174dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.50" />
+
+            <View
+                android:id="@+id/vRedBg"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@drawable/ic_red_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guideline2"></View>
+
+
+            <RelativeLayout
+                android:id="@+id/relProgressContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/crlLayerInner"
+                    android:layout_width="117dp"
+                    android:layout_height="129dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible"
+                    app:cpb_background_progressbar_color="@color/colorGray50"
+                    app:cpb_background_progressbar_width="9dp"
+                    app:cpb_progress="60"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="@color/colorRed"
+                    app:cpb_progressbar_width="10dp"
+                    app:cpb_round_border="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/crlLayerMiddle"
+                    app:layout_constraintEnd_toEndOf="@+id/crlLayerMiddle"
+                    app:layout_constraintStart_toStartOf="@+id/crlLayerMiddle"
+                    app:layout_constraintTop_toTopOf="@+id/crlLayerMiddle" />
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/crlLayerMiddle"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    app:cpb_background_progressbar_color="@color/colorGray50"
+                    app:cpb_background_progressbar_width="9dp"
+                    app:cpb_progress="60"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="@color/colorOrange"
+                    app:cpb_progressbar_width="10dp"
+                    app:cpb_round_border="true"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/crlLayerOuter"
+                    app:layout_constraintEnd_toEndOf="@+id/crlLayerOuter"
+                    app:layout_constraintStart_toStartOf="@+id/crlLayerOuter"
+                    app:layout_constraintTop_toTopOf="@+id/crlLayerOuter" />
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/crlLayerOuter"
+                    android:layout_width="153dp"
+                    android:layout_height="153dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cpb_background_progressbar_color="@color/colorGray50"
+                    app:cpb_background_progressbar_width="9dp"
+                    app:cpb_progress="60"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="@color/colorGray50"
+                    app:cpb_progressbar_width="10dp"
+                    app:cpb_round_border="true" />
+
+                <RelativeLayout
+                    android:id="@+id/relProfileBg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/txt_profile_completion_container_top"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pbProfileCompletion">
+
+                    <ImageView
+                        android:id="@+id/imgProfilePic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_profile_dummy" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_profile_add" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgHeart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_top_30"
+                android:src="@drawable/ic_heart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relProgressContainer" />
+
+            <ImageView
+                android:id="@+id/imgCoins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_30"
+                android:layout_marginTop="@dimen/margin_top_30"
+                android:src="@drawable/ic_coin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgHeart" />
+
+            <ImageView
+
+                android:id="@+id/imgBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_30"
+                android:src="@drawable/ic_badge"
+                app:layout_constraintStart_toEndOf="@id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/relProgressContainer" />
+
+            <ImageView
+                android:id="@+id/imgGems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_30"
+                android:layout_marginTop="@dimen/margin_top_30"
+                android:src="@drawable/ic_gems"
+                app:layout_constraintStart_toEndOf="@id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/imgBadge" />
+
+            <TextView
+                android:id="@+id/txtHeartHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_black"
+                android:maxLines="1"
+                android:text="39%"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/imgHeart"
+                app:layout_constraintTop_toTopOf="@+id/imgHeart" />
+
+            <TextView
+                android:id="@+id/txtHeartSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:maxLines="1"
+                android:text="Health Score"
+                android:textColor="@color/colorWhite"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/txtHeartHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtHeartHead" />
+
+            <TextView
+                android:id="@+id/txtCoinsHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_black"
+                android:maxLines="1"
+                android:text="10979"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/imgCoins"
+                app:layout_constraintTop_toTopOf="@+id/imgCoins" />
+
+            <TextView
+                android:id="@+id/txtCoinsSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:maxLines="1"
+                android:text="Coins"
+                android:textColor="@color/colorWhite"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/txtCoinsHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtCoinsHead" />
+
+            <TextView
+                android:id="@+id/txtBadgeHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_black"
+                android:maxLines="1"
+                android:text="15"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/imgBadge"
+                app:layout_constraintTop_toTopOf="@+id/imgBadge" />
+
+            <TextView
+                android:id="@+id/txtMedicalSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:maxLines="1"
+                android:text="Badges"
+                android:textColor="@color/colorWhite"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/txtBadgeHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtBadgeHead" />
+
+            <TextView
+                android:id="@+id/txtGemsHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_black"
+                android:maxLines="1"
+                android:text="10"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/imgGems"
+                app:layout_constraintTop_toTopOf="@+id/imgGems" />
+
+            <TextView
+                android:id="@+id/txtGemsSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:maxLines="1"
+                android:text="Gems"
+                android:textColor="@color/colorWhite"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/txtGemsHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtGemsHead" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/activityTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="#FFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vRedBg"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/colorRed"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/colorRed"
+                app:tabTextColor="@color/colorGray" />
+
+            <!--            <androidx.viewpager.widget.ViewPager-->
+            <!--                android:id="@+id/mActivityViewpager"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="500dp"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/activityTabLayout"/>-->
+
+            <com.hav.havlife.view.custom.CustomViewpager
+                android:id="@+id/mActivityViewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activityTabLayout"/>
+            <TextView
+                android:id="@+id/txtYourBalanceHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_30"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:layout_marginEnd="@dimen/margin_end_30"
+                android:fontFamily="@font/roboto_black"
+                android:text="Your Balance"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mActivityViewpager" />
+
+            <TextView
+                android:id="@+id/txtYourBalanceSubHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_5"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Achieve your goal and earn more points"
+                android:textColor="@color/colorGray60"
+                app:layout_constraintEnd_toEndOf="@+id/txtYourBalanceHead"
+                app:layout_constraintStart_toStartOf="@+id/txtYourBalanceHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtYourBalanceHead" />
+
+            <RelativeLayout
+                android:id="@+id/relEarningHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:background="@drawable/rectangle_corner_border_gray"
+                app:layout_constraintEnd_toEndOf="@+id/txtYourBalanceHead"
+                app:layout_constraintStart_toStartOf="@+id/txtYourBalanceHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtYourBalanceSubHead">
+
+                <ImageView
+                    android:id="@+id/imgDoller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start_30"
+                    android:layout_marginTop="@dimen/margin_top_10"
+                    android:src="@drawable/ic_doller" />
+
+                <TextView
+                    android:id="@+id/txtDollerValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/imgDoller"
+                    android:layout_alignTop="@+id/imgDoller"
+                    android:layout_marginStart="@dimen/margin_start_30"
+                    android:layout_marginTop="@dimen/margin_top_20"
+                    android:text="10,979"
+                    android:textColor="@color/colorRed"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDollerValue"
+                    android:layout_alignStart="@+id/txtDollerValue"
+                    android:layout_alignEnd="@+id/txtDollerValue"
+                    android:layout_marginTop="@dimen/margin_top_5"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Point"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_end_20"
+                    android:src="@drawable/ic_refresh" />
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvEarningPoints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:layout_marginBottom="20dp"
+                android:clipToPadding="false"
+                android:layout_marginStart="@dimen/margin_start_20"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtYourBalanceHead"
+                app:layout_constraintTop_toBottomOf="@+id/relEarningHead"/>
+
+            <TextView
+                android:id="@+id/txtFuelYourStartHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_30"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:layout_marginEnd="@dimen/margin_end_30"
+                android:fontFamily="@font/roboto_black"
+                android:text="Fuel Your Start"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcvEarningPoints" />
+
+            <TextView
+                android:id="@+id/txtFuelYourStartSubHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_5"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Achieve your goal and earn more points"
+                android:textColor="@color/colorGray60"
+                app:layout_constraintEnd_toEndOf="@+id/txtYourBalanceHead"
+                app:layout_constraintStart_toStartOf="@+id/txtYourBalanceHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtFuelYourStartHead" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvFuelStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="@dimen/margin_start_20"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtFuelYourStartSubHead"/>
+
+            <TextView
+                android:id="@+id/txtUpcomingChallengersHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_30"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:layout_marginEnd="@dimen/margin_end_30"
+                android:fontFamily="@font/roboto_black"
+                android:text="Upcoming Challenges"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcvFuelStart" />
+
+            <TextView
+                android:id="@+id/txtUpcomingChallengersSubHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_5"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Achieve your goal and earn more points"
+                android:textColor="@color/colorGray60"
+                app:layout_constraintEnd_toEndOf="@+id/txtYourBalanceHead"
+                app:layout_constraintStart_toStartOf="@+id/txtYourBalanceHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtUpcomingChallengersHead" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvChallenge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_20"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="@dimen/margin_start_20"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtUpcomingChallengersSubHead"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

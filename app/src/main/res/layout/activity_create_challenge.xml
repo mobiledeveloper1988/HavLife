@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Jithin kozhiyodan on 14/1/21 3:03 PM
+  ~ Copyright (c) 2021 . All rights reserved.
+  ~ Last modified 14/1/21 3:03 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.challenge.CreateChallengeActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBarCreateChallenge"
+        style="@style/Widget.MaterialComponents.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nstScrollCreateChallenge"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topAppBarCreateChallenge">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:paddingBottom="@dimen/margin_bottom_30">
+
+            <TextView
+                android:id="@+id/txtChallengeHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_profile_completion_head_top"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="@string/btn_challenge_details_new"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_add_phone_head_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvCreateChallenge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_top_20"
+                app:layout_constraintTop_toBottomOf="@+id/txtChallengeHead" />
+
+            <LinearLayout
+                android:id="@+id/lytContentBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/rcvCreateChallenge"
+                app:layout_constraintStart_toStartOf="@+id/rcvCreateChallenge"
+                app:layout_constraintTop_toBottomOf="@+id/rcvCreateChallenge">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/txt_challenge_details_target_steps"
+                    android:textColor="@color/colorGray10"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rcvCreateChallenge">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/txt_challenge_details_start_date"
+                            android:textColor="@color/colorGray10"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:drawableStart="@drawable/ic_calendar"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rcvCreateChallenge">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/txt_challenge_details_end_date"
+                            android:textColor="@color/colorGray10"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:drawableStart="@drawable/ic_calendar"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16sp"
+                        />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/txt_challenge_details_description"
+                    android:textColor="@color/colorGray10"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtFoodAllergies"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/txt_challenge_details_add_frd"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_add_phone_sub_head_sp"
+                app:layout_constraintStart_toStartOf="@+id/rcvCreateChallenge"
+                app:layout_constraintTop_toBottomOf="@+id/lytContentBox" />
+
+            <ImageView
+                android:id="@+id/imgFoodAllergies"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp"
+                android:src="@drawable/ic_select_tick"
+                app:layout_constraintBottom_toBottomOf="@+id/txtFoodAllergies"
+                app:layout_constraintEnd_toEndOf="@+id/rcvCreateChallenge"
+                app:layout_constraintTop_toTopOf="@+id/txtFoodAllergies" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvAddFriends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtFoodAllergies" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

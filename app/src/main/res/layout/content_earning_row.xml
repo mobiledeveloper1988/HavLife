@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Jithin kozhiyodan on 31/12/20 7:25 PM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 31/12/20 7:25 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/rectangle_corner"
+    android:padding="@dimen/margin_start_20">
+
+    <TextView
+        android:id="@+id/earningHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Earn Points"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNewBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNewBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_yellow_bg"
+        android:fontFamily="@font/roboto_bold"
+        android:paddingStart="@dimen/margin_end_10"
+        android:paddingTop="5dp"
+        android:paddingEnd="@dimen/margin_end_10"
+        android:paddingBottom="5dp"
+        android:text="New"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/earningHead" />
+
+    <TextView
+        android:id="@+id/txtEarningPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_30"
+        android:fontFamily="@font/roboto_bold"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="50"
+        android:textColor="@color/colorWhite"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/earningHead" />
+
+    <TextView
+        android:id="@+id/txtEarningPointSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="+ Points"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="@+id/txtEarningPoint"
+        app:layout_constraintTop_toBottomOf="@+id/txtEarningPoint" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_10"
+        android:fontFamily="@font/roboto_regular"
+        android:maxLines="3"
+        android:text="Complete your profile today"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtEarningPointSub"
+        app:layout_constraintTop_toBottomOf="@+id/txtEarningPointSub" />
+
+    <ImageView
+        android:id="@+id/imgArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtEarningPoint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

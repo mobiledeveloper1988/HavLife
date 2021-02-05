@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Jithin kozhiyodan on 21/10/20 2:03 PM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 21/10/20 2:03 PM
+  ~
+  -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate android:fromXDelta="0" android:toXDelta="100%p"
+        android:duration="@android:integer/config_mediumAnimTime"/>
+</set>

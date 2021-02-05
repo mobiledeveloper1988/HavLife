@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Jithin kozhiyodan on 18/10/20 10:29 PM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 18/10/20 10:29 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.AddPhoneScreen"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/txt_add_phone_container_bottom"
+            android:layout_marginTop="@dimen/txt_add_phone_box_top">
+
+            <TextView
+                android:id="@+id/txtAddPhoneHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="@string/txt_add_phone_head"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_add_phone_head_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtAddPhoneSubHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_sign_up_sub_head_top"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/txt_sign_up_sub_head"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_add_phone_sub_head_sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtAddPhoneHead"
+                app:layout_constraintStart_toStartOf="@+id/txtAddPhoneHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtAddPhoneHead" />
+
+            <TextView
+                android:id="@+id/txtAddPhoneDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_add_phone_description_top"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/txt_add_phone_description"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_add_phone_sub_head_sp"
+
+                app:layout_constraintEnd_toEndOf="@+id/txtAddPhoneHead"
+                app:layout_constraintStart_toStartOf="@+id/txtAddPhoneHead"
+                app:layout_constraintTop_toBottomOf="@+id/txtAddPhoneSubHead" />
+
+            <RelativeLayout
+                android:id="@+id/relAddPhoneBox"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/txt_add_phone_box_height"
+                android:layout_marginStart="@dimen/txt_add_phone_box_start"
+                android:layout_marginTop="@dimen/txt_add_phone_box_top"
+                android:layout_marginEnd="@dimen/txt_add_phone_box_end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAddPhoneDescription">
+
+                <ImageView
+                    android:id="@+id/imgPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_mobile" />
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/countryCodePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/imgPhone"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/txt_add_phone_country_start"
+                    app:ccp_hintExampleNumber="true"
+                    app:ccp_showNameCode="false" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/countryCodePicker"
+                    android:hint="@string/txt_add_phone_hint"
+                    android:inputType="phone"
+                    app:boxStrokeColor="@color/colorRed10"
+                    android:textCursorDrawable="@color/colorRed10"
+                    android:gravity="center"/>
+            </RelativeLayout>
+            <Button
+                android:id="@+id/btnAddPhone"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_sign_in_input_form_pwd_top"
+                app:backgroundTint="@color/colorAccent"
+                android:text="@string/btn_add_phone_text"
+                app:layout_constraintEnd_toEndOf="@+id/relAddPhoneBox"
+                app:layout_constraintStart_toStartOf="@+id/relAddPhoneBox"
+                app:layout_constraintTop_toBottomOf="@+id/relAddPhoneBox" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBarAddPhone"
+        style="@style/Widget.MaterialComponents.Toolbar"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

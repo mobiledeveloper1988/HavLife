@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Jithin kozhiyodan on 30/11/20 9:10 PM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 30/11/20 9:10 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+    android:id="@+id/cstInterestBox"
+android:paddingStart="@dimen/margin_start_10"
+    android:paddingEnd="@dimen/margin_end_10"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/relInterest"
+        android:layout_width="@dimen/txt_profile_completion_selected_box_width"
+        android:layout_height="@dimen/txt_profile_completion_selected_box_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/imgInterest"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_centerInParent="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imgInterestTick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_select_tick"
+        android:layout_marginStart="5dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/relInterest"
+        app:layout_constraintTop_toTopOf="@+id/relInterest"
+        />
+    <TextView
+        android:id="@+id/txtInterest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_regular"
+        android:maxLines="1"
+        android:textColor="@color/colorGray"
+        android:textSize="14sp"
+        android:text="jithun"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/relInterest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

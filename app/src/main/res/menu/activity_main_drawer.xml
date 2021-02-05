@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Jithin kozhiyodan on 15/1/21 8:59 AM
+  ~ Copyright (c) 2021 . All rights reserved.
+  ~ Last modified 15/1/21 8:59 AM
+  ~
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_notification"
+            android:title="@string/menu_notification" />
+        <item
+            android:id="@+id/nav_appearance"
+            android:icon="@drawable/ic_eye"
+            android:title="@string/menu_appearance" />
+        <item
+            android:id="@+id/nav_referral"
+            android:icon="@drawable/ic_referral"
+            android:title="@string/menu_referral" />
+        <item
+            android:id="@+id/nav_integration"
+            android:icon="@drawable/ic_integration"
+            android:title="@string/menu_integration" />
+        <item
+            android:id="@+id/nav_privacy"
+            android:icon="@drawable/ic_privacy"
+            android:title="@string/menu_privacy" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help"
+            android:title="@string/menu_help" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about"
+            android:title="@string/menu_about" />
+    </group>
+</menu>

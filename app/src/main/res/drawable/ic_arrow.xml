@@ -1,0 +1,20 @@
+<!--
+  ~ Created by Jithin kozhiyodan on 31/12/20 8:45 PM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 31/12/20 8:45 PM
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="59dp"
+    android:height="59dp"
+    android:viewportWidth="59"
+    android:viewportHeight="59">
+  <path
+      android:pathData="M29.5,29.5m-29.5,0a29.5,29.5 0,1 1,59 0a29.5,29.5 0,1 1,-59 0"
+      android:fillColor="#F9671C"/>
+  <path
+      android:pathData="M16,28.5625H41.4452L36.2065,23.3125L37.5161,22L45,29.5L37.5161,37L36.2065,35.6875L41.4452,30.4375H16V28.5625Z"
+      android:fillColor="#ffffff"
+      android:fillType="evenOdd"/>
+</vector>

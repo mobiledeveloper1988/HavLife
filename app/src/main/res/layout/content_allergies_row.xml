@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Jithin kozhiyodan on 8/12/20 8:21 PM
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 8/12/20 8:21 PM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/relMedical"
+        android:layout_width="@dimen/txt_profile_completion_medical_box_width"
+        android:layout_height="@dimen/txt_profile_completion_medical_box_height"
+        android:background="@drawable/round_bg_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:clickable="false"
+        >
+
+        <ImageView
+            android:id="@+id/imgMedical"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_centerInParent="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/txtMedicalHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/colorBlack"
+        android:textSize="16dp"
+        android:maxLines="1"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@+id/relMedical"
+        app:layout_constraintStart_toStartOf="@+id/relMedical"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/txtMedicalSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:maxLines="1"
+        android:textColor="@color/colorGray50"
+        app:layout_constraintTop_toBottomOf="@+id/txtMedicalHead"
+        app:layout_constraintStart_toStartOf="@+id/txtMedicalHead"
+        android:layout_marginTop="3dp"/>
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonTint="@color/colorBlue10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtMedicalHead"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMedicalSub"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorGray40"
+        app:layout_constraintTop_toBottomOf="@+id/relMedical"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

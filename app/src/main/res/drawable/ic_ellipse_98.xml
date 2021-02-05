@@ -1,0 +1,16 @@
+<!--
+  ~ Created by Jithin kozhiyodan on 14/1/21 1:36 PM
+  ~ Copyright (c) 2021 . All rights reserved.
+  ~ Last modified 14/1/21 1:36 PM
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="10dp"
+    android:height="10dp"
+    android:viewportWidth="10"
+    android:viewportHeight="10">
+  <path
+      android:pathData="M5,5m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"
+      android:fillColor="#FF9900"/>
+</vector>
